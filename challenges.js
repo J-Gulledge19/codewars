@@ -49,5 +49,23 @@ function cakes(recipe, available) {
     return Math.min(...arr);
 }
 
-console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
-console.log(cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}));
+// console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
+// console.log(cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000}));
+
+
+//---------------------Challenge 3---------------------
+
+// Messi goals function
+// Messi is a soccer player with goals in three leagues:
+
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the function to return his total number of goals in all three leagues.
+
+// Note: the input will always be valid.
+
+// For example:
+
+// 5, 10, 2  -->  17
+
