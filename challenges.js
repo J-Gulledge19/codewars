@@ -225,5 +225,13 @@ function findMultiples(integer, limit) {
 // Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
 
 function twiceAsOld(dadYearsOld, sonYearsOld) {
-    // your code here
+    let twice = sonYearsOld * 2;
+    let diff = dadYearsOld - twice;
+    if ( diff < 0 ) {
+        return diff * -1;
+    } else {
+        return diff;
+    }
   }
+
+// console.log(twiceAsOld(36,7));
