@@ -235,3 +235,17 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   }
 
 // console.log(twiceAsOld(36,7));
+
+//---------------------Challenge 12---------------------
+
+// What Javascript statement in place of "?" will make the result always be between 6 and 7?
+
+const x = 2;
+let y = 3;
+function update(arg) { 
+    return Math.random() + y * arg; 
+}
+y = 2;
+y = 3;  // Ensure y is 3
+const result = update(x);
+console.log(result);
