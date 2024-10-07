@@ -248,4 +248,32 @@ function update(arg) {
 y = 2;
 y = 3;  // Ensure y is 3
 const result = update(x);
-console.log(result);
+// console.log(result);
+
+//---------------------Challenge 13---------------------
+
+//Create a function that takes a Roman numeral as its argument and returns its value as a numeric decimal integer. You don't need to validate the form of the Roman numeral.
+
+function solution (roman) {
+    let romanNum = {
+        I : 1,
+        V : 5,
+        X : 10,
+        L : 50,
+        C : 100,
+        D : 500,
+        M : 1000
+    }
+    let arr = roman.split("");
+    let sum = 0;
+    for ( let i = 0 ; i < arr.length ; i++ ) {
+        if ( romanNum[arr[i]] < romanNum[arr[i+1]] ) {
+            sum -= romanNum[arr[i]];
+        } else {
+            sum += romanNum[arr[i]];
+        }
+    }
+      return sum;
+  }
+
+console.log(solution('XXXI'));
