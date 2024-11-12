@@ -338,5 +338,17 @@ function moveZeros(arr) {
 // You may assume that the board passed in is valid in the context of a game of Tic-Tac-Toe.
 
 function isSolved(board) {
-    
+    let arr = board.reduce((acc, val) => acc.concat(val), []);
+    let win = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+    ];
+    for ( let i = 0 ; i < win.length ; i++ ) {
+        let [a,b,c] = win[i];
+        if ( arr[a] && arr[a] === arr[b] && arr[a] === arr[c] ) {
+            return arr[a];
+        }
+    }
+    return arr.includes(0) ? -1 : 0;
 }
